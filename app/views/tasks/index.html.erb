@@ -9,7 +9,7 @@
 
 <ul>
 <% @tasks.each do |t| %>
-<li><%= link_to t.id, t %> : <%= t.content %></li>
+<li><%= link_to t.id, t %> : <%= t.status %> &gt; <%= t.content %></li>
 <% end %>
 </ul>
 
