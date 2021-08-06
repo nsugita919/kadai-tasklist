@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'sessions/new'
   get 'sessions/create'
   get 'sessions/destroy'
-  get 'toppages/index'
+  # get 'toppages/index'
   get 'users/index'
   get 'users/show'
   get 'users/new'
@@ -10,8 +10,6 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
     
     root to: 'tasks#index'
-
-     #root to: 'toppages#index'
     
     resources :tasks
     
