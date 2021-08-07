@@ -3,10 +3,7 @@ class TasksController < ApplicationController
     before_action :correct_user, only: [:show, :edit, :update, :destroy]
     
     def index
-        if logged_in?
-            @task = current_user.tasks.build  # form_with 用
-            @pagy, @tasks = pagy(current_user.tasks.order(id: :desc))
-        end
+        @pagy, @tasks = pagy(current_user.tasks.order(id: :desc))
     end
     
     def show
@@ -14,7 +11,6 @@ class TasksController < ApplicationController
     
     def new
         @task = Task.new
-        Task.new(content: 'sample')
     end
     
     def create
